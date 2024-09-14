@@ -1,0 +1,117 @@
+---
+// NavBar.astro
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo.webp";
+
+const navItems = [
+  { label: "Inicio", url: "/" },
+  { label: "Galería", url: "/galeria" },
+  { label: "Conóceme", url: "/conoceme" },
+  { label: "Cursos", url: "/cursos" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="bg-pink-600 shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <a href="/" class="flex items-center py-4 px-2">
+            <Image
+              src={logoImage}
+              alt="Logo Tienda de Tartas"
+              class="w-[150px]"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center space-x-1">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.url}
+              class="py-1 px-2 text-white font-medium rounded transition duration-300"
+            >
+              {item.label}
+              {item.url === currentPath ? (
+                <div
+                  class="border-b-2 border-white transition-all duration-300"
+                  transition:name="menu-line"
+                  transition:animate="slide"
+                />
+              ) : (
+                <div class="border-b-2 border-transparent mx-4 transition-all duration-300" />
+              )}
+            </a>
+          ))
+        }
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="boton-menu" class="outline-none mobile-menu-button">
+          <svg
+            class="w-6 h-6 text-pink-100 hover:text-white"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="hidden mobile-menu" id="mobile-menu">
+    <ul class="">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              class={`py-1 px-2 font-medium rounded transition duration-300 ${
+                currentPath === item.url
+                  ? "text-pink-700 bg-pink-200"
+                  : "text-pink-100 hover:text-white hover:bg-pink-500"
+              }`}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const menu = document.querySelector("#mobile-menu");
+    const btn = document.querySelector("#boton-menu");
+
+    if (menu && btn) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    } else {
+      console.error("El botón o el menú no se encontraron en el DOM.");
+    }
+  });
+</script>
+
+<style>
+  nav {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .mobile-menu {
+    @apply md:hidden;
+  }
+
+  .mobile-menu a {
+    @apply block py-2 px-4 text-sm transition duration-300;
+  }
+</style>
