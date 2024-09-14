@@ -43,6 +43,18 @@ import Layout from "../layouts/Layout.astro";
       playsinline
       class="absolute top-0 left-0 w-full h-full object-cover z-0"
     >
+      <track
+        src="captions_en.vtt"
+        kind="captions"
+        srclang="en"
+        label="english_captions"
+      />
+      <track
+        src="captions_es.vtt"
+        kind="captions"
+        srclang="es"
+        label="spanish_captions"
+      />
       <source src="video-dc-pastel.webm" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -74,13 +86,13 @@ import Layout from "../layouts/Layout.astro";
           >
             <a
               href="#"
-              class="bg-pink-500 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-600 hover:shadow-lg transform hover:-translate-y-1"
+              class="bg-pink-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-600 hover:shadow-lg transform hover:-translate-y-1"
             >
               Conóceme
             </a>
             <a
               href="#"
-              class="bg-white text-pink-500 border-2 border-pink-500 px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-100 hover:shadow-lg transform hover:-translate-y-1"
+              class="bg-white text-pink-700 border-2 border-pink-500 px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-100 hover:shadow-lg transform hover:-translate-y-1"
             >
               Galería
             </a>
