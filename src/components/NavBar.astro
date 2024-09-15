@@ -13,12 +13,15 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="bg-pink-600 shadow-lg">
+<nav class="bg-pink-600 shadow-2xl">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between">
       <div class="flex space-x-7">
         <div>
-          <a href="/" class="flex items-center py-4 px-2">
+          <a
+            href="/"
+            class="flex items-center px-2 transform hover:scale-105 transition duration-300"
+          >
             <Image
               src={logoImage}
               alt="Logo Tienda de Tartas"
@@ -32,12 +35,12 @@ const currentPath = Astro.url.pathname;
           navItems.map((item) => (
             <a
               href={item.url}
-              class="py-1 px-2 text-white font-medium rounded transition duration-300"
+              class="py-1 px-2 text-white font-semibold rounded hover:border-pink-700 hover:text-pink-700 hover:bg-white transition duration-300 group"
             >
               {item.label}
               {item.url === currentPath ? (
                 <div
-                  class="border-b-2 border-white transition-all duration-300"
+                  class="border-b-2 border-white transition-all duration-300 group-hover:border-pink-700"
                   transition:name="menu-line"
                   transition:animate="slide"
                 />

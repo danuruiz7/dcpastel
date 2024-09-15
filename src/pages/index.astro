@@ -5,152 +5,114 @@ import Whatsapp from "../icons/Whatsapp.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<!-- ---
-import Layout from "../layouts/Layout.astro";
----
-
-<Layout title="DC Pastel">
-  <main class="">
-    <div class="max-w-6xl mx-auto px-6">
-      <section
-        class="flex flex-col items-center justify-center mt-14 text-center gap-4"
-      >
-        <h1 class="text-pink-600 font-semibold text-6xl">Bienvenidos</h1>
-        <p class="text-gray-400 text-lg text-center">
-          Donde cada tarta es una explosión de sabor y creatividad,
-          transformando momentos simples en celebraciones inolvidables. Descubre
-          la magia en cada bocado. ¡Sumérgete en el dulce mundo de DC Pastel hoy
-          mismo!
-        </p>
-        <div class="flex justify-center gap-8">
-          <a href="#" class="bg-pink-400 text-white px-2 py-1 rounded"
-            >Conoceme</a
-          >
-          <a href="#" class="bg-pink-400 text-white px-2 py-1 rounded"
-            >Galería</a
-          >
-        </div>
-      </section>
-    </div>
-  </main>
-</Layout> -->
 <Layout title="DC Pastel">
   <main class="relative min-h-screen overflow-hidden">
-    <video
-      autoplay
-      loop
-      muted
-      playsinline
-      class="absolute top-0 left-0 w-full h-full object-cover z-0"
-    >
-      <track
-        src="captions_en.vtt"
-        kind="captions"
-        srclang="en"
-        label="english_captions"
-      />
-      <track
-        src="captions_es.vtt"
-        kind="captions"
-        srclang="es"
-        label="spanish_captions"
-      />
-      <source src="video-dc-pastel.webm" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <div class="absolute inset-0 z-0">
+      <video
+        src="video-dc-pastel.webm"
+        autoplay
+        loop
+        muted
+        playsinline
+        class="w-full h-full object-cover"
+      >
+      </video>
+    </div>
 
     <div
       class="relative z-10 max-w-6xl mx-auto px-2 md:px-6 py-4 md:py-20 flex items-center"
     >
-      <section
-        class="w-full bg-white bg-opacity-40 rounded-3xl shadow-2xl p-8 md:p-12 md:px-4 backdrop-blur-sm"
-      >
-        <div class="mx-auto text-center">
-          <h1
-            class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in"
-          >
-            Bienvenidos a DC Pastel
-          </h1>
-          <div class="w-full md:w-3/4 mx-auto">
-            <p
-              class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed animate-fade-in-delay"
+      <div>
+        <section
+          class="w-full bg-white bg-opacity-20 rounded-3xl shadow-2xl p-8 md:p-12 md:px-4 backdrop-blur-sm"
+        >
+          <div class="mx-auto text-center">
+            <h1
+              class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in"
             >
-              Donde cada tarta es una explosión de sabor y creatividad,
-              transformando momentos simples en celebraciones inolvidables.
-              Descubre la magia en cada bocado. ¡Sumérgete en el dulce mundo de
-              DC Pastel hoy mismo!
-            </p>
+              Bienvenidos a DC Pastel
+            </h1>
+            <div class="w-full md:w-3/4 mx-auto">
+              <p
+                class="text-gray-800 text-lg font-semibold md:text-xl mb-8 leading-relaxed animate-fade-in-delay"
+              >
+                Donde cada tarta es una explosión de sabor y creatividad,
+                transformando momentos simples en celebraciones inolvidables.
+                Descubre la magia en cada bocado. ¡Sumérgete en el dulce mundo
+                de DC Pastel hoy mismo!
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 animate-fade-in-delay-2"
+            >
+              <a
+                href="#"
+                class="bg-pink-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-600 hover:shadow-lg transform hover:-translate-y-1"
+              >
+                Conóceme
+              </a>
+              <a
+                href="#"
+                class="bg-white text-pink-700 border-2 border-pink-500 px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-100 hover:shadow-lg transform hover:-translate-y-1"
+              >
+                Galería
+              </a>
+            </div>
+            <div
+              class="mt-8 flex justify-center gap-8 sm:gap-24 animate-fade-in-delay-2"
+            >
+              <a
+                href="#"
+                class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <Instagram />
+                <span class="">Instagram</span>
+              </a>
+              <a
+                href="#"
+                class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <Facebook />
+                <span class="">Facebook</span>
+              </a>
+              <a
+                href="#"
+                class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <Whatsapp />
+                <span class="">Whatsapp</span>
+              </a>
+            </div>
           </div>
-          <div
-            class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 animate-fade-in-delay-2"
-          >
-            <a
-              href="#"
-              class="bg-pink-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-600 hover:shadow-lg transform hover:-translate-y-1"
-            >
-              Conóceme
-            </a>
-            <a
-              href="#"
-              class="bg-white text-pink-700 border-2 border-pink-500 px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-100 hover:shadow-lg transform hover:-translate-y-1"
-            >
-              Galería
-            </a>
-          </div>
-          <div
-            class="mt-8 flex justify-center gap-8 sm:gap-24 animate-fade-in-delay-2"
-          >
-            <a
-              href="#"
-              class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
-            >
-              <Instagram />
-              <span class="">Instagram</span>
-            </a>
-            <a
-              href="#"
-              class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
-            >
-              <Facebook />
-              <span class="">Facebook</span>
-            </a>
-            <a
-              href="#"
-              class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
-            >
-              <Whatsapp />
-              <span class="">Whatsapp</span>
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
+  </main>
+</Layout>
 
-    <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-      .animate-fade-in {
-        animation: fadeIn 0.8s ease-out forwards;
-      }
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
 
-      .animate-fade-in-delay {
-        animation: fadeIn 0.8s ease-out 0.3s forwards;
-        opacity: 0;
-      }
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
 
-      .animate-fade-in-delay-2 {
-        animation: fadeIn 0.8s ease-out 0.6s forwards;
-        opacity: 0;
-      }
-    </style>
-  </main></Layout
->
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+</style>
