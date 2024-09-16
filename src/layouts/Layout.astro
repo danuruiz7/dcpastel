@@ -24,7 +24,7 @@ const { title } = Astro.props;
     <ViewTransitions />
 
     <!-- Open Graph (para Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="{title}" />
+    <meta property="og:title" content={title} />
     <meta
       property="og:description"
       content="La mejor tienda de tartas de Madrid y España."
@@ -36,7 +36,7 @@ const { title } = Astro.props;
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:title" content={title} />
     <meta
       name="twitter:description"
       content="La mejor tienda de tartas de Madrid y España."
