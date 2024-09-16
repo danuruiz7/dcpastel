@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo.webp";
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+import Whatsapp from "../icons/Whatsapp.astro";
+---
+
+<footer class="bg-pink-400 text-white shadow-lg">
+  <div
+    class="max-w-6xl mx-auto px-4 py-4 flex flex-col-reverse gap-4 md:flex-row"
+  >
+    <div class="flex flex-col items-center justify-center md:w-1/2">
+      <a
+        href="/"
+        class="flex items-center px-2 transform hover:scale-105 transition duration-300"
+      >
+        <Image src={logoImage} alt="Logo Tienda de Tartas" class="w-[150px]" />
+      </a>
+    </div>
+
+    <div class="flex flex-col items-center gap-2 md:gap-2 md:w-1/2">
+      <h2 class="text-2xl font-bold text-shadow">Contacto</h2>
+      <div class="flex flex-col gap-1">
+        <span class="text-shadow">Movil: +569 123 456 789</span>
+        <span class="text-shadow">Email: info@dcpastel.es</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center gap-2 md:gap-2 md:w-1/2">
+      <h2 class="text-2xl font-bold text-shadow">Redes Sociales</h2>
+      <div class="flex gap-4 md:gap-8">
+        <a
+          href="#"
+          class="bg-white rounded-full p-2 text-shadow"
+          aria-label="Instagram"><Instagram size="22" /></a
+        >
+        <a
+          href="#"
+          class="bg-white rounded-full p-2 text-shadow"
+          aria-label="Facebook"><Facebook size="22" /></a
+        >
+        <a
+          href="#"
+          class="bg-white rounded-full p-2 text-shadow"
+          aria-label="Whatsapp"><Whatsapp size="22" /></a
+        >
+      </div>
+    </div>
+  </div>
+</footer>

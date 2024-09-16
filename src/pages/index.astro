@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="DC Pastel">
-  <main class="relative min-h-screen overflow-hidden">
+  <main class="relative overflow-hidden">
     <div class="absolute inset-0 z-0">
       <video
         src="video-dc-pastel.webm"
@@ -22,19 +22,17 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="relative z-10 max-w-6xl mx-auto px-2 md:px-6 py-4 md:py-20 flex items-center"
     >
-      <div>
-        <section
-          class="w-full bg-white bg-opacity-20 rounded-3xl shadow-2xl p-8 md:p-12 md:px-4 backdrop-blur-sm"
-        >
+      <div class="flex flex-col items-center justify-center">
+        <section class="w-full rounded-3xl p-8 md:p-12 md:px-4">
           <div class="mx-auto text-center">
             <h1
-              class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in"
+              class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in text-shadow-pink"
             >
               Bienvenidos a DC Pastel
             </h1>
             <div class="w-full md:w-3/4 mx-auto">
               <p
-                class="text-gray-800 text-lg font-semibold md:text-xl mb-8 leading-relaxed animate-fade-in-delay"
+                class="text-white text-lg font-semibold md:text-xl mb-8 leading-relaxed animate-fade-in-delay text-shadow"
               >
                 Donde cada tarta es una explosión de sabor y creatividad,
                 transformando momentos simples en celebraciones inolvidables.
@@ -65,22 +63,22 @@ import Layout from "../layouts/Layout.astro";
                 href="#"
                 class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
               >
-                <Instagram />
-                <span class="">Instagram</span>
+                <Instagram size="44" />
+                <span class="text-white text-shadow">Instagram</span>
               </a>
               <a
                 href="#"
                 class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
               >
-                <Facebook />
-                <span class="">Facebook</span>
+                <Facebook size="44" />
+                <span class="text-white text-shadow">Facebook</span>
               </a>
               <a
                 href="#"
                 class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
               >
-                <Whatsapp />
-                <span class="">Whatsapp</span>
+                <Whatsapp size="44" />
+                <span class="text-white text-shadow">Whatsapp</span>
               </a>
             </div>
           </div>

@@ -52,9 +52,13 @@ const currentPath = Astro.url.pathname;
         }
       </div>
       <div class="md:hidden flex items-center">
-        <button id="boton-menu" class="outline-none mobile-menu-button">
+        <button
+          id="boton-menu"
+          class="outline-none mobile-menu-button"
+          aria-label="Abrir menú"
+        >
           <svg
-            class="w-6 h-6 text-pink-100 hover:text-white"
+            class="w-8 h-8 text-pink-100 hover:text-white"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
