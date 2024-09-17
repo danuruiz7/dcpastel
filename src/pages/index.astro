@@ -6,83 +6,85 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="DC Pastel">
-  <main class="relative overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <video
-        src="video-dc-pastel.webm"
-        autoplay
-        loop
-        muted
-        playsinline
-        class="w-full h-full object-cover"
-      >
-      </video>
-    </div>
+  <main class="relative overflow-hidden h-screen">
+    <div>
+      <div class="absolute inset-0 z-0 opacity-70">
+        <video
+          src="video-dc-pastel.webm"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover"
+        >
+        </video>
+      </div>
 
-    <div
-      class="relative z-10 max-w-6xl mx-auto px-2 md:px-6 py-4 md:py-20 flex items-center"
-    >
-      <div class="flex flex-col items-center justify-center">
-        <section class="w-full rounded-3xl p-8 md:p-12 md:px-4">
-          <div class="mx-auto text-center">
-            <h1
-              class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in text-shadow-pink"
-            >
-              Bienvenidos a DC Pastel
-            </h1>
-            <div class="w-full md:w-3/4 mx-auto">
-              <p
-                class="text-white text-lg font-semibold md:text-xl mb-8 leading-relaxed animate-fade-in-delay text-shadow"
+      <div
+        class="relative z-10 max-w-6xl mx-auto px-2 md:px-6 py-4 md:py-44 flex items-center"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <section class="w-full rounded-3xl p-8 md:p-12 md:px-4">
+            <div class="mx-auto text-center">
+              <h1
+                class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in text-shadow-pink"
               >
-                Donde cada tarta es una explosión de sabor y creatividad,
-                transformando momentos simples en celebraciones inolvidables.
-                Descubre la magia en cada bocado. ¡Sumérgete en el dulce mundo
-                de DC Pastel hoy mismo!
-              </p>
+                Bienvenidos a DC Pastel
+              </h1>
+              <div class="w-full md:w-3/4 mx-auto">
+                <p
+                  class="text-white text-lg font-semibold md:text-xl mb-8 leading-relaxed animate-fade-in-delay text-shadow"
+                >
+                  Donde cada tarta es una explosión de sabor y creatividad,
+                  transformando momentos simples en celebraciones inolvidables.
+                  Descubre la magia en cada bocado. ¡Sumérgete en el dulce mundo
+                  de DC Pastel hoy mismo!
+                </p>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 animate-fade-in-delay-2"
+              >
+                <a
+                  href="#"
+                  class="bg-pink-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-600 hover:shadow-lg transform hover:-translate-y-1"
+                >
+                  Conóceme
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-pink-700 border-2 border-pink-500 px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-100 hover:shadow-lg transform hover:-translate-y-1"
+                >
+                  Galería
+                </a>
+              </div>
+              <div
+                class="mt-8 flex justify-center gap-8 sm:gap-24 animate-fade-in-delay-2"
+              >
+                <a
+                  href="#"
+                  class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                >
+                  <Instagram size="44" />
+                  <span class="text-white text-shadow">Instagram</span>
+                </a>
+                <a
+                  href="#"
+                  class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                >
+                  <Facebook size="44" />
+                  <span class="text-white text-shadow">Facebook</span>
+                </a>
+                <a
+                  href="#"
+                  class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                >
+                  <Whatsapp size="44" />
+                  <span class="text-white text-shadow">Whatsapp</span>
+                </a>
+              </div>
             </div>
-            <div
-              class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 animate-fade-in-delay-2"
-            >
-              <a
-                href="#"
-                class="bg-pink-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-600 hover:shadow-lg transform hover:-translate-y-1"
-              >
-                Conóceme
-              </a>
-              <a
-                href="#"
-                class="bg-white text-pink-700 border-2 border-pink-500 px-8 py-3 rounded-full font-semibold text-lg transition duration-300 ease-in-out hover:bg-pink-100 hover:shadow-lg transform hover:-translate-y-1"
-              >
-                Galería
-              </a>
-            </div>
-            <div
-              class="mt-8 flex justify-center gap-8 sm:gap-24 animate-fade-in-delay-2"
-            >
-              <a
-                href="#"
-                class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
-              >
-                <Instagram size="44" />
-                <span class="text-white text-shadow">Instagram</span>
-              </a>
-              <a
-                href="#"
-                class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
-              >
-                <Facebook size="44" />
-                <span class="text-white text-shadow">Facebook</span>
-              </a>
-              <a
-                href="#"
-                class="flex flex-col items-center gap-2 transition duration-300 ease-in-out transform hover:-translate-y-1"
-              >
-                <Whatsapp size="44" />
-                <span class="text-white text-shadow">Whatsapp</span>
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
   </main>

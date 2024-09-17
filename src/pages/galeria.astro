@@ -1,10 +1,41 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
+const images = [
+  "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/13058710/pexels-photo-13058710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/15228657/pexels-photo-15228657/free-photo-of-plato-azucar-postre-dulce.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+];
 ---
 
-<Layout title="DC Pastel">
-	<main>
-    <h1>Galería</h1>
-	</main>
+<Layout title="DC Pastel - Galería">
+  <main
+    class="max-w-6xl mx-auto py-12 flex flex-col items-center justify-center h-screen"
+  >
+    <h1
+      class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in text-shadow-pink text-center"
+    >
+      Galería de tartas
+    </h1>
+
+    <section class="flex">
+      <div class="flex flex-col items-center justify-center">
+        <h3>Tartas de plato</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem quaerat saepe excepturi tempore accusamus reprehenderit
+          dolor ea, debitis vel neque libero est velit delectus optio earum rem
+          quod aut. At!
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Plato azucar"
+          class="w-full h-full"
+        />
+      </div>
+    </section>
+  </main>
 </Layout>
