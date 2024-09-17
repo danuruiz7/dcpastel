@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import Slider from "../components/Slider.astro";
 
 const images = [
   "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -11,31 +12,47 @@ const images = [
 
 <Layout title="DC Pastel - Galería">
   <main
-    class="max-w-6xl mx-auto py-12 flex flex-col items-center justify-center h-screen"
+    class="max-w-6xl mx-auto py-12 flex flex-col items-center justify-center"
   >
     <h1
-      class="text-pink-600 font-bold text-4xl md:text-6xl mb-6 animate-fade-in text-shadow-pink text-center"
+      class="text-pink-600 font-bold text-4xl md:text-6xl mb-20 animate-fade-in text-shadow-pink text-center"
     >
       Galería de tartas
     </h1>
 
-    <section class="flex">
-      <div class="flex flex-col items-center justify-center">
-        <h3>Tartas de plato</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem quaerat saepe excepturi tempore accusamus reprehenderit
-          dolor ea, debitis vel neque libero est velit delectus optio earum rem
-          quod aut. At!
-        </p>
-      </div>
-      <div>
-        <img
-          src="https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Plato azucar"
-          class="w-full h-full"
-        />
-      </div>
+    <section
+      class="grid grid-cols-1 place-content-center sm:grid-cols-2 lg:grid-cols-3 gap-10"
+    >
+      <img
+        src="/tartas/5.png"
+        'alt="Tarta' 1"
+        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square transition duration-300 ease-in-out hover:-rotate-3 hover:scale-110"
+      />
+      <img
+        src="/tartas/9.png"
+        alt="Tarta 2"
+        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
+      />
+      <img
+        src="/tartas/11.png"
+        alt="Tarta 3"
+        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
+      />
+      <img
+        src="/tartas/5.png"
+        'alt="Tarta' 1"
+        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square transition duration-300 ease-in-out hover:-rotate-3 hover:scale-110"
+      />
+      <img
+        src="/tartas/9.png"
+        alt="Tarta 2"
+        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
+      />
+      <img
+        src="/tartas/11.png"
+        alt="Tarta 3"
+        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
+      />
     </section>
   </main>
 </Layout>
