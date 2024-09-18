@@ -1,12 +1,38 @@
 ---
-import { Image } from "astro:assets";
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-import Slider from "../components/Slider.astro";
 
 const images = [
-  "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/13058710/pexels-photo-13058710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/15228657/pexels-photo-15228657/free-photo-of-plato-azucar-postre-dulce.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  {
+    url: "/tartas/5.png",
+    title: "Tarta de Chocolate",
+    description: "Una deliciosa tarta de chocolate con glaseado.",
+  },
+  {
+    url: "/tartas/9.png",
+    title: "Tarta de Fresa",
+    description: "Tarta de fresa con capas esponjosas y fresas frescas.",
+  },
+  {
+    url: "/tartas/11.png",
+    title: "Tarta de Vainilla",
+    description: "Tarta clásica de vainilla con cobertura de crema.",
+  },
+  {
+    url: "/tartas/1.png",
+    title: "Tarta de Limón",
+    description: "Tarta refrescante de limón con relleno cremoso.",
+  },
+  {
+    url: "/tartas/2.png",
+    title: "Tarta de Hulk",
+    description: "Tarta de zanahoria con crema de queso.",
+  },
+  {
+    url: "/tartas/3.png",
+    title: "Tarta de Almendra",
+    description: "Tarta con base de almendras y decorada con frutas.",
+  },
 ];
 ---
 
@@ -15,7 +41,8 @@ const images = [
     class="max-w-6xl mx-auto py-12 flex flex-col items-center justify-center"
   >
     <h1
-      class="text-pink-600 font-bold text-4xl md:text-6xl mb-20 animate-fade-in text-shadow-pink text-center"
+      class="text-pink-600 font-bold text-4xl md:text-6xl mb-12 animate-fade-in text-shadow-pink text-center"
+      transition:name="title-principal"
     >
       Galería de tartas
     </h1>
@@ -23,36 +50,53 @@ const images = [
     <section
       class="grid grid-cols-1 place-content-center sm:grid-cols-2 lg:grid-cols-3 gap-10"
     >
-      <img
-        src="/tartas/5.png"
-        'alt="Tarta' 1"
-        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square transition duration-300 ease-in-out hover:-rotate-3 hover:scale-110"
-      />
-      <img
-        src="/tartas/9.png"
-        alt="Tarta 2"
-        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
-      />
-      <img
-        src="/tartas/11.png"
-        alt="Tarta 3"
-        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
-      />
-      <img
-        src="/tartas/5.png"
-        'alt="Tarta' 1"
-        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square transition duration-300 ease-in-out hover:-rotate-3 hover:scale-110"
-      />
-      <img
-        src="/tartas/9.png"
-        alt="Tarta 2"
-        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
-      />
-      <img
-        src="/tartas/11.png"
-        alt="Tarta 3"
-        class="w-[80%] md:w-full mx-auto h-auto rounded-lg shadow-lg aspect-square"
-      />
+      {
+        images.map((card, index) => (
+          <Card
+            key={index}
+            url={card.url}
+            title={card.title}
+            description={card.description}
+            class={`animate-fade-in-delay-${index * 200}`}
+          />
+        ))
+      }
     </section>
   </main>
 </Layout>
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-0 {
+    animation: fadeIn 0.8s ease-out 0s forwards;
+  }
+
+  .animate-fade-in-delay-200 {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+  }
+
+  .animate-fade-in-delay-400 {
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+  }
+
+  .animate-fade-in-delay-600 {
+    animation: fadeIn 0.8s ease-out 0.6s forwards;
+  }
+
+  .animate-fade-in-delay-800 {
+    animation: fadeIn 0.8s ease-out 0.8s forwards;
+  }
+</style>

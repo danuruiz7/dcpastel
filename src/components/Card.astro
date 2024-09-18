@@ -1,0 +1,25 @@
+---
+const { url, title, description, class: cardClass } = Astro.props;
+---
+
+<div
+  class={`flex flex-row gap-4 w-full p-4  rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out ${cardClass}`}
+>
+  <img
+    src={url}
+    alt={title}
+    class="w-[50%] mx-auto rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:rotate-2 hover:scale-105 hover:shadow-lg"
+  />
+  <section class="flex flex-col w-[50%] gap-2 justify-center">
+    <h2
+      class="text-pink-600 font-bold text-lg text-pretty transition duration-300 ease-in-out hover:text-pink-400"
+    >
+      {title}
+    </h2>
+    <p
+      class="text-gray-600 text-sm text-pretty transition duration-300 ease-in-out hover:text-gray-800"
+    >
+      {description}
+    </p>
+  </section>
+</div>

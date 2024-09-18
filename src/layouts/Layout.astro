@@ -65,6 +65,30 @@ const { title } = Astro.props;
       monospace;
   }
 
+  body {
+    background: rgb(255, 56, 229);
+    background: radial-gradient(
+      circle,
+      rgba(255, 56, 229, 0.1) 0%,
+      rgba(255, 39, 238, 0.1) 48%,
+      rgba(255, 0, 144, 0.1) 97%
+    );
+    background-size: 200% 200%; /* Aumenta el tamaño del fondo para que se mueva */
+    animation: gradientBackground 10s ease infinite;
+  }
+
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   .text-shadow {
     text-shadow: 2px 2px 3px black;
   }
